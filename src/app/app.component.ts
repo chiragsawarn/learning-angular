@@ -6,13 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'blog';
-  tasks : any[] = [];
-  addTask(dataFromInputField:string){
-    this.tasks.push({id:this.tasks.length, name:dataFromInputField});
-  }
-  removeTask(task:any){
-    let indexToRemove = this.tasks.indexOf(task);
-    this.tasks.splice(indexToRemove,1);
+  title = 'Passing data to child component';
+  randomVal = Math.floor(Math.random()*100);
+  updateVal(){
+    this.randomVal = Math.floor(Math.random()*100);
   }
 }
