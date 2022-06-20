@@ -1,13 +1,9 @@
-<h1>To do List</h1>
-<section>
-    <input #ip placeholder="Type something"/>
-    <button mat-raised-button color="primary" (click)="addTask(ip.value)">Add Task</button>
-</section>
-<section>
-    <ul *ngFor="let task of tasks">
+<h1>{{title}}</h1>
+
+<div>
+    <ul *ngFor="let pokemon of pokemons">
         <li>
-            <span>{{task.name}}</span>
-            <button mat-raised-button (click)="removeTask(task)">Remove Task</button>
+            <a href="{{pokemon.url}}">{{pokemon.name}}</a>
         </li>
     </ul>
-</section>
+</div>
